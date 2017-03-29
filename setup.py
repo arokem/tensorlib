@@ -1,4 +1,5 @@
 import os
+import os.path as op
 import setuptools
 
 setuptools.setup(
@@ -13,10 +14,12 @@ setuptools.setup(
     license='BSD 3-clause',
     url='http://github.com/tensorlib/tensorlib/',
     install_requires=['numpy',
-                      'scipy',],
+                      'scipy', ],
     classifiers=['Development Status :: 3 - Alpha',
                  'Intended Audience :: Science/Research',
                  'License :: OSI Approved :: BSD License',
                  'Operating System :: OS Independent',
                  'Topic :: Scientific/Engineering'],
+    package_data={'tensorlib': [op.join('datasets', 'data', '*.txt'),
+                                op.join('datasets', 'data', '*.mat')]}
 )
