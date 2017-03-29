@@ -1,5 +1,4 @@
 import os
-import os.path as op
 import setuptools
 
 setuptools.setup(
@@ -20,6 +19,6 @@ setuptools.setup(
                  'License :: OSI Approved :: BSD License',
                  'Operating System :: OS Independent',
                  'Topic :: Scientific/Engineering'],
-    package_data={'tensorlib': [op.join('datasets', 'data', '*.txt'),
-                                op.join('datasets', 'data', '*.mat')]}
+    package_data={'tensorlib': [os.path.join('datasets', 'data', '*.txt'),
+                                os.path.join('datasets', 'data', '*.mat')]}
 )
